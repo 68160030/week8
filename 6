@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+
+public class Main6 {
+
+
+   String id;
+   String name;
+   int mid, fin, hw;
+   int total;
+   char grade;
+
+
+   public void input(Scanner sc) {
+       System.out.print("Enter student id : ");
+       id = sc.next();
+
+
+       System.out.print("Enter name-surname : ");
+       name = sc.next();
+
+
+       System.out.print("Enter midterm(30) : ");
+       mid = sc.nextInt();
+
+
+       System.out.print("Enter final(30) : ");
+       fin = sc.nextInt();
+
+
+       System.out.print("Enter homework(40) : ");
+       hw = sc.nextInt();
+   }
+
+
+   public void calculateTotal() {
+       total = mid + fin + hw;
+   }
+
+
+   public void calculateGrade() {
+       if (total >= 80)
+           grade = 'A';
+       else if (total >= 70)
+           grade = 'B';
+       else if (total >= 60)
+           grade = 'C';
+       else if (total >= 50)
+           grade = 'D';
+       else
+           grade = 'F';
+   }
+
+
+   public void display() {
+       System.out.println(id + "\t" + name + "\t" + total + "\t" + grade);
+   }
+}
